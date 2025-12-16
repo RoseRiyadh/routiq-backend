@@ -1,59 +1,170 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚚 Routiq Backend API
+**Multi-Tenant Delivery & Fleet Management Platform**  
+*Because chaos is not a delivery strategy.*
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+## 👋 Hello There
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Welcome to **Routiq** — a scalable, multi-tenant backend API built to run delivery and fleet operations without spreadsheets, guesswork, or 3 a.m. “where is the driver?” phone calls.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Routiq handles merchants, orders, drivers, fleets, real-time tracking, and all the logistical drama in between — calmly, efficiently, and at scale.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+If you move things from point A to point B, **Routiq has your back**.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## ✨ What This Backend Actually Does
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🏢 Multi-Tenant, Like a Grown-Up System
+- Each delivery company lives in its own happy data bubble
+- No accidental data leaks (we like our tenants isolated, thanks)
+- One core system, many businesses
 
-## Laravel Sponsors
+### 📦 Order Management (No Orders Left Behind)
+- Centralised order intake from multiple merchants
+- Smart validation, prioritisation, and lifecycle tracking
+- Knows what an SLA is — and respects it
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🚗 Drivers & Fleets, But Smarter
+- Intelligent driver assignment
+- Vehicle capacity awareness
+- Real-time GPS updates (yes, *real* real-time)
 
-### Premium Partners
+### 📍 Live Tracking & Notifications
+- Accurate ETAs
+- Event-driven updates
+- Less “Where is my order?” and more “Oh wow, that was fast.”
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 🔌 Merchant Integrations That Don’t Cry
+- API-first, webhook-powered
+- Plug into e-commerce, POS, or custom systems
+- No polling. No hacks. No tears.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🧠 Under the Hood (Tech Stack)
 
-## Code of Conduct
+- **Framework:** Laravel
+- **Language:** PHP
+- **Database:** MySQL / PostgreSQL (tenant-aware)
+- **Cache & Realtime:** Redis
+- **Queues:** Laravel Queues / Horizon
+- **Auth:** Token-based (Sanctum / JWT)
+- **Architecture:** Modular, API-first, microservice-ready
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Built for scale. Built for sanity.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🏗️ High-Level Architecture (No Fancy Diagrams, Sorry)
+![mermaid-diagram-2025-12-16-120928.png](public/mermaid-diagram-2025-12-16-120928.png)
+Stateless where possible. Cached where necessary. Fast where it matters.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🧩 Core Modules
+
+### 🔐 Authentication & Tenancy
+- Tenant identification
+- Role-based access control
+- Secure API authentication
+
+### 📦 Order Management
+- Order creation & validation
+- Status transitions
+- Priority handling
+- SLA awareness
+
+### 🚗 Driver & Fleet Management
+- Driver availability
+- Vehicle assignment
+- Capacity & workload tracking
+
+### 🧠 Assignment Engine
+- Location proximity
+- Driver workload
+- Delivery windows
+- Dynamic re-assignment when life happens
+
+### 📡 Tracking & Events
+- Live GPS updates
+- Webhooks for everyone
+- Notification triggers
+
+### 🚨 Exception Handling
+- Delays
+- Re-routing
+- Driver unavailability
+- Proactive customer alerts
+
+---
+
+## 🔄 Typical Delivery Flow (A Love Story)
+
+1. **Order Received**  
+   The system politely says: “Got it.”
+
+2. **Order Validation**  
+   Zones, capacity, and rules are checked (no funny business).
+
+3. **Queue Processing**  
+   Orders line up. No pushing.
+
+4. **Driver Assignment**  
+   The smartest driver gets the job.
+
+5. **Live Tracking**  
+   Everyone knows where everything is.
+
+6. **Exception Handling**  
+   Traffic happens. Routiq adapts.
+
+---
+
+## 📐 API Design Philosophy
+
+- RESTful (because of course)
+- Clear request & response contracts
+- Predictable HTTP status codes
+- Versioned endpoints (`/api/v1`)
+- Webhooks > Polling (always)
+
+---
+
+## 🔗 Example Endpoints (Just a Teaser)
+
+```http
+POST   /api/v1/orders
+GET    /api/v1/orders/{id}
+PATCH  /api/v1/orders/{id}/status
+
+POST   /api/v1/drivers
+GET    /api/v1/drivers/available
+
+POST   /api/v1/webhooks/merchant
+
+```
+
+## 👩‍💻 About Me
+
+Hi, I’m **Rose R. Salim** 👋  
+I design and build backend systems that make complex operations feel… manageable.
+
+I work at the intersection of **engineering, documentation, and product strategy**, translating real-world business chaos into structured, scalable systems that teams can actually use and maintain.
+
+My background spans:
+- **Backend Engineering** — building reliable, multi-tenant systems with Laravel & .NET
+- **Technical Writing** — turning complex architectures into clear documentation, APIs, and workflows
+- **Technical Project Management** — aligning engineers, stakeholders, and business goals without the drama
+- **Business Development** — designing systems that don’t just work, but make business sense
+
+I care deeply about:
+- Systems that scale without collapsing
+- Documentation that developers don’t hate
+- Clean APIs, clear logic, and thoughtful architecture
+- Bridging the gap between “what the business wants” and “what the system should do”
+
+If a system involves **logistics, workflows, automation, or multi-tenant platforms**, I’m probably already thinking about how to make it better.
+
+Let’s build things that work — and keep working.
